@@ -4,14 +4,14 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "npx @opennextjs/cloudflare build",
     "start": "next start",
     "lint": "eslint"
   },
   "dependencies": {
     "canvas-confetti": "^1.9.4",
     "lucide-react": "^1.27.0",
-    "next": "15.5.2",
+    "next": "15.5.21",
     "razorpay": "^2.9.8",
     "react": "19.2.4",
     "react-dom": "19.2.4"
