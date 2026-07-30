@@ -5,8 +5,6 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "deploy:worker": "npx @cloudflare/next-on-pages && wrangler pages deploy .vercel/output/static",
-    "pages:deploy": "npx @cloudflare/next-on-pages && wrangler pages deploy .vercel/output/static",
     "start": "next start",
     "lint": "eslint"
   },
@@ -19,7 +17,6 @@
     "react-dom": "19.2.4"
   },
   "devDependencies": {
-    "@cloudflare/next-on-pages": "^1.13.7",
     "@tailwindcss/postcss": "^4",
     "@types/canvas-confetti": "^1.9.0",
     "@types/node": "^20",
