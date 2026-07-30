@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://northsouthtiffin.surge.sh/sitemap.xml

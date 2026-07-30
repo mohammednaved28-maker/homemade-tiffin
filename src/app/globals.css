@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+/* Theme 1: Classic Green & Saffron (Default) */
+:root, [data-theme="classic"] {
+  --font-heading: 'Outfit', sans-serif;
+  --font-body: 'Plus Jakarta Sans', sans-serif;
+  
+  --bg-primary: #FFF8E7;
+  --bg-secondary: #F3EBD9;
+  --bg-card: #FFFFFF;
+  --bg-nav: rgba(255, 248, 231, 0.92);
+  
+  --brand-primary: #1B4332;
+  --brand-primary-hover: #123023;
+  --brand-secondary: #F4713E;
+  --brand-secondary-hover: #D95927;
+  --brand-gold: #D4AF37;
+  --brand-badge-bg: #E8F5E9;
+  --brand-badge-text: #1B4332;
+  
+  --text-main: #1C2D27;
+  --text-muted: #4B6358;
+  --text-on-primary: #FFFFFF;
+  
+  --border-color: #E2D9C5;
+  --card-shadow: 0 10px 30px -5px rgba(27, 67, 50, 0.08), 0 4px 12px rgba(244, 113, 62, 0.04);
+  --header-border: rgba(27, 67, 50, 0.1);
+  --btn-radius: 9999px;
+  --card-radius: 1.25rem;
+}
+
+/* Theme 2: Rich Homestyle Brown (NEW Dedicated Warm Brown Theme) */
+[data-theme="brown"] {
+  --font-heading: 'Outfit', sans-serif;
+  --font-body: 'Plus Jakarta Sans', sans-serif;
+  
+  --bg-primary: #2B1B15;
+  --bg-secondary: #1F130E;
+  --bg-card: #38241D;
+  --bg-nav: rgba(43, 27, 21, 0.95);
+  
+  --brand-primary: #F4A261;
+  --brand-primary-hover: #E76F51;
+  --brand-secondary: #F4713E;
+  --brand-secondary-hover: #D95927;
+  --brand-gold: #E9C46A;
+  --brand-badge-bg: #4A2E24;
+  --brand-badge-text: #F4A261;
+  
+  --text-main: #FFF8E7;
+  --text-muted: #D8C4B6;
+  --text-on-primary: #1F130E;
+  
+  --border-color: #4D3328;
+  --card-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.4);
+  --header-border: #4D3328;
+  --btn-radius: 9999px;
+  --card-radius: 1.25rem;
+}
+
+/* Theme 3: Modern Minimal */
+[data-theme="minimal"] {
+  --font-heading: 'Plus Jakarta Sans', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  
+  --bg-primary: #FAFAFA;
+  --bg-secondary: #F3F4F6;
+  --bg-card: #FFFFFF;
+  --bg-nav: rgba(255, 255, 255, 0.94);
+  
+  --brand-primary: #1F2937;
+  --brand-primary-hover: #111827;
+  --brand-secondary: #C1502E;
+  --brand-secondary-hover: #9E3E22;
+  --brand-gold: #B45309;
+  --brand-badge-bg: #F3F4F6;
+  --brand-badge-text: #1F2937;
+  
+  --text-main: #111827;
+  --text-muted: #6B7280;
+  --text-on-primary: #FFFFFF;
+  
+  --border-color: #E5E7EB;
+  --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  --header-border: #E5E7EB;
+  --btn-radius: 0.5rem;
+  --card-radius: 0.75rem;
+}
+
+/* Theme 4: Vibrant Food Delivery */
+[data-theme="vibrant"] {
+  --font-heading: 'Outfit', sans-serif;
+  --font-body: 'Plus Jakarta Sans', sans-serif;
+  
+  --bg-primary: #F8FAFC;
+  --bg-secondary: #EFF6FF;
+  --bg-card: #FFFFFF;
+  --bg-nav: rgba(255, 255, 255, 0.95);
+  
+  --brand-primary: #FF6B35;
+  --brand-primary-hover: #E8551F;
+  --brand-secondary: #F72C2C;
+  --brand-secondary-hover: #D01B1B;
+  --brand-gold: #F59E0B;
+  --brand-badge-bg: #FFF7ED;
+  --brand-badge-text: #C2410C;
+  
+  --text-main: #0F172A;
+  --text-muted: #475569;
+  --text-on-primary: #FFFFFF;
+  
+  --border-color: #E2E8F0;
+  --card-shadow: 0 12px 32px -4px rgba(255, 107, 53, 0.12);
+  --header-border: #E2E8F0;
+  --btn-radius: 1rem;
+  --card-radius: 1.5rem;
+}
+
+*, ::before, ::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-body);
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--brand-primary);
+  border-radius: 4px;
+  opacity: 0.8;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--brand-secondary);
+}
+
+/* Custom Utilities */
+.bg-theme-main {
+  background-color: var(--bg-primary);
+}
+
+.bg-theme-secondary {
+  background-color: var(--bg-secondary);
+}
+
+.bg-theme-card {
+  background-color: var(--bg-card);
+}
+
+.text-theme-main {
+  color: var(--text-main);
+}
+
+.text-theme-muted {
+  color: var(--text-muted);
+}
+
+.border-theme {
+  border-color: var(--border-color);
+}
+
+.btn-brand-primary {
+  background-color: var(--brand-primary);
+  color: var(--text-on-primary);
+  border-radius: var(--btn-radius);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.btn-brand-primary:hover {
+  background-color: var(--brand-primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px -4px rgba(0, 0, 0, 0.2);
+}
+
+.btn-brand-secondary {
+  background-color: var(--brand-secondary);
+  color: #FFFFFF;
+  border-radius: var(--btn-radius);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.btn-brand-secondary:hover {
+  background-color: var(--brand-secondary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px -4px rgba(244, 113, 62, 0.3);
+}
+
+.card-theme {
+  background-color: var(--bg-card);
+  border-radius: var(--card-radius);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--card-shadow);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.card-theme:hover {
+  transform: translateY(-4px);
+}
+
+.badge-theme {
+  background-color: var(--brand-badge-bg);
+  color: var(--brand-badge-text);
+  border-radius: var(--btn-radius);
+}
+
+/* Glassmorphism Navigation */
+.nav-glass {
+  background-color: var(--bg-nav);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--header-border);
+}
+
+/* Smooth Pulse for WhatsApp FAB */
+@keyframes pulse-ring {
+  0% { transform: scale(0.95); opacity: 0.8; }
+  50% { transform: scale(1.1); opacity: 0.4; }
+  100% { transform: scale(0.95); opacity: 0.8; }
+}
+
+.whatsapp-pulse {
+  animation: pulse-ring 2.5s infinite ease-in-out;
+}
